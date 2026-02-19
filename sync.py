@@ -68,7 +68,7 @@ def resolve_imports_for_library(bv, lib):
 
         try:
             (type_, name) = bv.parse_type_string(type_string)
-        except:
+        except Exception:
             log_error("Invalid type, skipping")
 
         bv.define_data_var(import_.datavar_addr, type_)

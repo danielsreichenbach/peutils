@@ -1,0 +1,20 @@
+[project]
+name = "peutils"
+version = "1.3.0"
+description = "Binary Ninja plugin providing utilities for working with PE binaries"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1",
+    "ruff>=0.8",
+]
+
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "basic"
+reportMissingImports = "warning"
+
+[tool.ruff]
+target-version = "py312"

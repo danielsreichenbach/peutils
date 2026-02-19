@@ -1,7 +1,11 @@
+import binaryninja.interaction
 import peutils
 from binaryninja import log_info
+from binaryninja.enums import BranchType, InstructionTextTokenType
+from binaryninja.flowgraph import FlowGraph, FlowGraphNode
+from binaryninja.function import DisassemblyTextLine, InstructionTextToken
 
-from .pe_parsing import *
+from .pe_parsing import get_eat_addr, get_eat_name, get_exports, get_iat_addr, get_imports
 
 def generate_report(bv):
     imports = get_imports(bv)

@@ -1,11 +1,6 @@
 import codecs
 import sys
 
-import binaryninja.interaction
-from binaryninja.flowgraph import FlowGraph, FlowGraphNode
-from binaryninja.function import DisassemblyTextLine, InstructionTextToken
-from binaryninja.enums import InstructionTextTokenType, BranchType
-
 if sys.version_info[0] == 3:
     decode_as = "ascii"
 else:
